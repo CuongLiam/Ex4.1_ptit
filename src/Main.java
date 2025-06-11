@@ -13,6 +13,8 @@ public class Main {
         System.out.println("chieu rong: "+ rec2.getWidth());
         System.out.println("chu vi is: "+ rec2.getChuVi());
         System.out.println("dien tich is: "+ rec2.getDienTich());
+
+        rec2.speak();
     }
 }
 
@@ -25,9 +27,13 @@ class Rectangle{
         width = 1;
     }
 
-    public Rectangle(int length, int width){
+    Rectangle(int length, int width){ // không ghi public thì sẽ là modifier mặc định (check zalo and dis)
         this.length = length;
         this.width = width;
+    }
+
+    void speak(){
+        System.out.println(this.length +" hi");
     }
 
     int getChuVi(){
